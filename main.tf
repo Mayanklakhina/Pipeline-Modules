@@ -1,5 +1,5 @@
-module "s3_bucket_create" {
-    source = "github.com/Mayanklakhina/Pipeline-Modules.git"
+module "create" {
+    source = "https://github.com/Mayanklakhina/pipeline-module.git"
     bucket-name = var.bucket-name
     tags = var.tags
 }
