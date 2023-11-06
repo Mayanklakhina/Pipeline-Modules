@@ -30,14 +30,14 @@ jobs:
        - name: Setup Terraform
          uses: hashicorp/setup-terraform@v2
 
-      - name: Initialize Terraform
-        run: terraform init
+       - name: Initialize Terraform
+         run: terraform init
 
-      - name: Select any action
-        run: echo "selected action=> ${{ github.event.inputs.action }}"
+       - name: Select any action
+         run: echo "selected action=> ${{ github.event.inputs.action }}"
 
-      - name: Apply or Destroy Infra
-        run: |
+       - name: Apply or Destroy Infra
+         run: |
           if [ "${{ github.event.inputs.action }}" == "apply" ]; then
             terraform apply -auto-approve
           elif [ "${{ github.event.inputs.action }}" == "destroy" ]; then
